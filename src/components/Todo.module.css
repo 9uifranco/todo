@@ -1,0 +1,133 @@
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    max-width: 46rem;
+    margin: auto;
+    margin-top: calc(0px - 1.6875rem);
+}
+
+
+.todoInput {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    height: 3.375rem;
+}
+
+.todoInput > input {
+    flex-grow: 1;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+    padding: 1rem;
+    transition: border-color 0.3s;
+    line-height: 1.4;
+    min-width: 200px;
+}
+
+.todoInput > input::placeholder {
+    color: var(--gray-300);
+}
+
+.todoInput > input:focus {
+    outline: none;
+    border-color: var(--purple-dark);
+}
+
+.todoInput > button {
+    border-radius: 8px;
+    width: 5.625rem;
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    min-width: 3.5rem;
+}
+
+.todoInput > button:not(:disabled):hover {
+    background-color: var(--blue);
+}
+
+.todoInput > button:disabled {
+    cursor: not-allowed;
+    background: var(--gray-300);
+    border: 1px solid var(--gray-300);
+}
+
+.todoListContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.todoStatus {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.createdStatusText {
+    font-size: 0.875rem;
+    color: var(--blue);
+    margin: 0 0.5rem;
+}
+
+.finishedStatusText {
+    font-size: 0.875rem;
+    color: var(--purple);
+    margin: 0 0.5rem;
+}
+
+.statusNumber {
+    color: var(--gray-200);
+    background-color: var(--gray-400);
+    border-radius: 25px;
+    padding: 0.175rem 0.6rem;
+    font-size: 0.75rem;
+    height: 1.25rem;
+}
+
+.todoList {
+    margin-top: 1.5rem;
+}
+
+.noItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border-top: 1px solid var(--gray-400);
+    padding-top: 4rem;
+    color: var(--gray-300);
+}
+
+.noItem > strong {
+    margin-top: 1rem;
+}
+
+@media (max-width: 624px) {
+    .todoContainer {
+        margin: 0 1rem;
+        margin-top: calc(0px - 1.6875rem);
+    }
+
+    .todoInput > button > span {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .noItem {
+        font-size: 75%;
+    }
+}
